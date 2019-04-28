@@ -31,14 +31,10 @@ public class Tile : MonoBehaviour
     [SerializeField]
     public int TileValue = 1;
 
-    Vector3 origPos;
-    Vector3 origRot;
 
     private void Start() {
         setTileColors();
         mr = GetComponent<MeshRenderer>();
-        origPos = transform.position;
-        origRot = transform.eulerAngles;
     }
 
     private void setTileColors() {
@@ -61,18 +57,13 @@ public class Tile : MonoBehaviour
 
     }
 
-    public int Receive() {
-        return TileValue;
-    }
 
     
     private void OnMouseEnter() {
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
             mr.material = Materials[1];
             Debug.Log(this.name);
-            //transform.up += new Vector3(0, hoverAmount, 0);
-            //transform.rotation = Quaternion.Euler(origRot);
-        }
+         }
 
     }
 
@@ -83,22 +74,7 @@ public class Tile : MonoBehaviour
         }
     }
 
-    //?This may not be nessicary
-    //private void OnTriggerStay(Collider other) {
-    //    if (other.tag == Utilities.GroundTag) {
-    //        onGround = true;
-    //    }
-     
-    //}
-
-    //private void OnTriggerExit(Collider other) {
-    //    if (other.tag == Utilities.GroundTag) {
-    //        onGround = false;
-    //    }
-    //}
-
     public bool IsGrounded() {
-  
         if (Physics.Raycast(transform.position, -transform.up, Mathf.Infinity, groundLayer)) {
            
             return true;
@@ -106,9 +82,5 @@ public class Tile : MonoBehaviour
         else {
             return false;
         }
-            
-        //return onGround;
     }
-
-    
 }

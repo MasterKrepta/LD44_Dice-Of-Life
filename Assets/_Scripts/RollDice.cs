@@ -6,15 +6,11 @@ using UnityEngine;
 public class RollDice : MonoBehaviour
 {
     Rigidbody rb;
-
     bool hasLanded;
-
     bool thrown;
-
     Vector3 initPos;
 
     public int DiceValue;
-
     public Tile[] diceTiles;
 
     // Start is called before the first frame update
@@ -35,25 +31,29 @@ public class RollDice : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space)) {
-            Utilities.CurrentMode = Utilities.GameModes.ROLLING;
-            RollTheDice();
-        }
+        if (Utilities.CurrentMode == Utilities.GameModes.ROLLING) {
 
-        if (rb.IsSleeping() && !hasLanded && thrown) {
-            hasLanded = true;
-            rb.useGravity = false;
+            if (Input.GetKeyDown(KeyCode.Space)) {
+                //Utilities.CurrentMode = Utilities.GameModes.ROLLING;
+                RollTheDice();
+            }
 
-            //TODO value check the sides to get value
-            CheckSides();
+            if (rb.IsSleeping() && !hasLanded && thrown) {
+                hasLanded = true;
+                rb.useGravity = false;
 
+                //TODO value check the sides to get value
+                CheckSides();
+
+            }
+            else if (rb.IsSleeping() && hasLanded && DiceValue == 0) {
+                RollAgain();
+            }
         }
-        else if (rb.IsSleeping() && hasLanded && DiceValue == 0) {
-            RollAgain();
-        }
+        
     }
 
-    private void RollAgain() {
+    public void RollAgain() {
         Reset();
         thrown = true;
         rb.useGravity = true;
@@ -71,7 +71,7 @@ public class RollDice : MonoBehaviour
         }
     }
 
-    private void Reset() {
+    public  void Reset() {
         transform.position = initPos;
         thrown = false;
         hasLanded = false;
@@ -84,8 +84,9 @@ public class RollDice : MonoBehaviour
             if (tile.IsGrounded()) {
                 DiceValue = tile.TileValue;
                 Debug.Log($"Rolled a {DiceValue} to {tile.Type}");
+                Utilities.NextAction();
+                PlayerInventory.Instance.CollectResource(tile.Type, DiceValue);
             }
         }
-        //TODO toggle the changing of modes. might not have to worry until i set up turn actions
     }
 }

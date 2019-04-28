@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21d0622c882e3d2478a4d34b21fee9bb, type: 3}
+  m_Name: HealthForMoney
+  m_EditorClassIdentifier: 
+  Title: Overtime
+  Description: We are going to need you to come in on Friday
+  Action1Amount: 2
+  ActionType1: 2
+  Action2Amount: -1
+  ActionType2: 1
