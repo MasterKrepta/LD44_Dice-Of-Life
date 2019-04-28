@@ -87,10 +87,10 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3081499857989638125}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
+  m_Size: {x: 0.75, y: 0.75, z: 0.75}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &4696644255479164342
 MonoBehaviour:
@@ -108,3 +108,6 @@ MonoBehaviour:
   Materials:
   - {fileID: 2100000, guid: ed60f0f0445c5cd4c94f1d254e010731, type: 2}
   - {fileID: 2100000, guid: c51a7767020bc1f4d93d369243dcdf5c, type: 2}
+  onGround: 0
+  Type: 2
+  TileValue: 1

@@ -6,6 +6,7 @@ public class Utilities : MonoBehaviour
 {
 
     public const string PlayerTag = "Player";
+    public const string GroundTag = "Ground";
     public const string Horizontal = "Horizontal";
     public const string Vertical = "Vertical";
     public static GameModes CurrentMode { get; set; }

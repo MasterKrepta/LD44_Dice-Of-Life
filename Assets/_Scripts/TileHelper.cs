@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+[ExecuteInEditMode]
 public class TileHelper : MonoBehaviour
 {
     [SerializeField] GameObject[] Sides;

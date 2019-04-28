@@ -6,26 +6,33 @@ using UnityEngine;
 public class PlayerDice : MonoBehaviour
 {
     [SerializeField] float rotSpeed = 50f;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
+    
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Utilities.CurrentMode == Utilities.GameModes.ROLLING) {
-            ManageRolling();
+     
+        switch (Utilities.CurrentMode) {
+            case Utilities.GameModes.SELECTING:
+                ManageSelecting();
+                break;
+            case Utilities.GameModes.ROLLING:
+                ManageRolling();
+                break;
+            default:
+                break;
         }
-        else {
-            ManageSelecting();
-        }
+ 
     }
 
     private void ManageRolling() {
-        throw new NotImplementedException();
+        Debug.Log("MODE: Rolling");
     }
 
     private void ManageSelecting() {
