@@ -39,6 +39,7 @@ public class RollDice : MonoBehaviour
             }
 
             if (rb.IsSleeping() && !hasLanded && thrown) {
+                SoundManager.Instance.Play(SoundManager.Instance.tickSound);
                 hasLanded = true;
                 rb.useGravity = false;
 
@@ -61,6 +62,7 @@ public class RollDice : MonoBehaviour
 
     private void RollTheDice() {
         if (!thrown && ! hasLanded) {
+            SoundManager.Instance.Play(SoundManager.Instance.rollSound);
             thrown = true;
             rb.useGravity = true;
             rb.AddForce(transform.forward * RollForce);

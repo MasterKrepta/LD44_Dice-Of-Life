@@ -56,6 +56,7 @@ public class EventCard : MonoBehaviour
 
     public void UseCard() {
         if (CanWeUseCard()) {
+            SoundManager.Instance.Play(SoundManager.Instance.tickSound);
             PlayerInventory.Instance.CollectResource(data.ActionType1, data.Action1Amount);
             PlayerInventory.Instance.CollectResource(data.ActionType2, data.Action2Amount);
 

@@ -54,7 +54,7 @@ public class SelectingTile : MonoBehaviour
         hitTile.TileValue = newTileToSwap.TileValue;
         hitTile.Type = newTileToSwap.Type;
         hitTile.setTileColors();
-
+        SoundManager.Instance.Play(SoundManager.Instance.swapSound);
         StoreObject.SetActive(false);
         
         
