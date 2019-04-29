@@ -9,7 +9,7 @@ public class RollDice : MonoBehaviour
     bool hasLanded;
     bool thrown;
     Vector3 initPos;
-
+    [SerializeField] float RollForce = 5f;
     public int DiceValue;
     public Tile[] diceTiles;
 
@@ -63,6 +63,7 @@ public class RollDice : MonoBehaviour
         if (!thrown && ! hasLanded) {
             thrown = true;
             rb.useGravity = true;
+            rb.AddForce(transform.forward * RollForce);
             rb.AddTorque(UnityEngine.Random.Range(0, 500), UnityEngine.Random.Range(0, 500), UnityEngine.Random.Range(0, 500));
         }
         else if (thrown && hasLanded) {

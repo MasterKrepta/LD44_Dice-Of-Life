@@ -63,7 +63,6 @@ public class Tile : MonoBehaviour
                 case TileTypes.TIME:
                     //tileColor = TileColor.GOLD;
                     mr.material = TimeMats[TileValue - 1];
-
                     break;
                 default:
                     break;
@@ -72,34 +71,25 @@ public class Tile : MonoBehaviour
     }
 
      void OnMouseEnter() {
-        
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
             mr.material.color = highlight.color;
-
         }
     }
      void OnMouseExit() {
         
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
             mr.material.color = originalColor;
-            
-            //transform.up = origPos;
         }
     }
 
     public Tile(TileTypes type, int tileValue) {
-        Debug.Log("CONSTRUCTOR CALLED");
+        //Debug.Log("CONSTRUCTOR CALLED");
         Type = type;
         TileValue = tileValue;
-        //setTileColors();
-       // mr = GetComponent<MeshRenderer>();
     }
-    
-
 
     public bool IsGrounded() {
         if (Physics.Raycast(transform.position, -transform.up, Mathf.Infinity, groundLayer)) {
-           
             return true;
         }
         else {

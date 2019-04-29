@@ -12,7 +12,10 @@ public class Utilities : MonoBehaviour
     public const string Horizontal = "Horizontal";
     public const string Vertical = "Vertical";
     public static GameModes CurrentMode { get; set; }
-    
+
+    public static Action OnTurnEnd;
+
+
     public enum GameModes
     {
         ROLLING,
@@ -46,6 +49,7 @@ public class Utilities : MonoBehaviour
             case GameModes.SELECTING:
                 AgeEveryTurn();
                 
+
                 CurrentMode = GameModes.ROLLING;
                 
                 break;
@@ -56,12 +60,14 @@ public class Utilities : MonoBehaviour
     }
 
     private static void CheckForGameOver() {
+        OnTurnEnd();
         if (PlayerInventory.Time <= 0 || PlayerInventory.Health <= 0) {
             SceneManager.LoadScene(2);
         }
     }
 
     private static void AgeEveryTurn() {
+        
         PlayerInventory.Time--;
         PlayerInventory.Health--;
         PlayerInventory.Instance.UpdateStats();

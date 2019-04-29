@@ -6,11 +6,19 @@ using UnityEngine;
 public class SelectingTile : MonoBehaviour
 {
     [SerializeField] GameObject StoreObject;
-    [SerializeField] Animator cameraAnimator;
+    public Animator cameraAnimator;
     public Tile newTileToSwap;
 
     private void Start() {
         StoreObject.SetActive(false);
+
+    }
+
+    private void OnEnable() {
+        Utilities.OnTurnEnd += ResetDicePos;
+    }
+    private void OnDisable() {
+        Utilities.OnTurnEnd -= ResetDicePos;
     }
     // Update is called once per frame
     void Update()
@@ -20,27 +28,15 @@ public class SelectingTile : MonoBehaviour
         
         }
 
-        if (Utilities.CurrentMode == Utilities.GameModes.ROLLING) {
-            cameraAnimator.Play("cameraIdle");
-
-        }
-        
-
-
-        //TODO if we need this its not running every frame
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
             cameraAnimator.SetTrigger("Zoom");
             SelectTileToReplace();
 
         }
-        else {
-            cameraAnimator.StopPlayback();
-            //cameraAnimator.Play("cameraIdle");
-        }
+       
     }
 
     public void SelectTileToReplace() {
-        
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, Mathf.Infinity)) {
@@ -49,21 +45,19 @@ public class SelectingTile : MonoBehaviour
             
             if (Input.GetMouseButtonDown(0) && hitTile != null) {
                 SwapTile(newTileToSwap, hitTile);
-                
             }
         }
-
     }
 
     private void SwapTile(Tile newTileToSwap, Tile hitTile) {
-        Debug.Log("Tiles swapped");
         hitTile.Type = newTileToSwap.Type;
         hitTile.TileValue = newTileToSwap.TileValue;
         hitTile.Type = newTileToSwap.Type;
         hitTile.setTileColors();
 
         StoreObject.SetActive(false);
-        cameraAnimator.SetTrigger("Reset");
+        
+        
         Utilities.NextAction();
 
     }
@@ -101,5 +95,8 @@ public class SelectingTile : MonoBehaviour
         newTileToSwap = newTile;
         return newTile;
     }
-
+    public  void ResetDicePos() {
+        cameraAnimator.ResetTrigger("Zoom");
+        cameraAnimator.SetTrigger("Reset");
+    }
 }

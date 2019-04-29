@@ -23,6 +23,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField]  TMP_Text txtHealth;
 
     [SerializeField] TMP_Text currentMode;
+    
 
     private void Start() {
         if (Instance == null) {
@@ -34,7 +35,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void InitResources() {
         //! This is where the game start
-        Time = 78; // average life
+        Time = 20; // average life
         Money = 10;
         Social = 5;
         Health = 25;
@@ -45,16 +46,20 @@ public class PlayerInventory : MonoBehaviour
         switch (type) {
             case Tile.TileTypes.SOCIAL:
                 Social += amount;
+                txtSocial.GetComponent<Animator>().SetTrigger("ResourceGet");
                 break;
             case Tile.TileTypes.HEALTH:
                 Health += amount;
+                txtHealth.GetComponent<Animator>().SetTrigger("ResourceGet");
                 break;
             case Tile.TileTypes.MONEY:
                 Money += amount;
+                txtMoney.GetComponent<Animator>().SetTrigger("ResourceGet");
                 break;
             case Tile.TileTypes.TIME:
                 Time += amount;
-                break;
+                txtTime.GetComponent<Animator>().SetTrigger("ResourceGet");
+                break;  
             default:
                 break;
         }
