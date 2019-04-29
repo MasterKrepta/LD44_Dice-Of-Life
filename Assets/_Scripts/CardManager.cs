@@ -15,6 +15,7 @@ public class CardManager : MonoBehaviour
 
     public static CardManager Instance = null;
 
+    
     // Start is called before the first frame update
     void Start()
     {

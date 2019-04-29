@@ -1,6 +1,8 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Utilities : MonoBehaviour
 {
@@ -24,9 +26,7 @@ public class Utilities : MonoBehaviour
     public static void NextAction() {
         switch (CurrentMode) {
             case GameModes.ROLLING:
-                
                 CurrentMode = GameModes.COLLECTING;
-                //PlayerInventory.Instance.UpdateStats();
                 break;
             case GameModes.COLLECTING:
                 
@@ -44,6 +44,7 @@ public class Utilities : MonoBehaviour
 
                 break;
             case GameModes.SELECTING:
+                AgeEveryTurn();
                 
                 CurrentMode = GameModes.ROLLING;
                 
@@ -52,5 +53,18 @@ public class Utilities : MonoBehaviour
                 break;
         }
         PlayerInventory.Instance.UpdateCurrentMode();
+    }
+
+    private static void CheckForGameOver() {
+        if (PlayerInventory.Time <= 0 || PlayerInventory.Health <= 0) {
+            SceneManager.LoadScene(2);
+        }
+    }
+
+    private static void AgeEveryTurn() {
+        PlayerInventory.Time--;
+        PlayerInventory.Health--;
+        PlayerInventory.Instance.UpdateStats();
+        CheckForGameOver();
     }
 }

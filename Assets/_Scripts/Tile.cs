@@ -32,12 +32,15 @@ public class Tile : MonoBehaviour
     }
     [SerializeField]bool onGround;
 
+    Color originalColor;
+
     public TileTypes Type;
     public TileColor tileColor;
 
     private void Start() {
         mr = GetComponent<MeshRenderer>();
         setTileColors();
+        originalColor = mr.material.color;
     }
 
     public void setTileColors() {
@@ -71,14 +74,14 @@ public class Tile : MonoBehaviour
      void OnMouseEnter() {
         
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
-            mr.material = highlight;
+            mr.material.color = highlight.color;
 
         }
     }
      void OnMouseExit() {
         
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
-            mr.material = highlight;
+            mr.material.color = originalColor;
             
             //transform.up = origPos;
         }

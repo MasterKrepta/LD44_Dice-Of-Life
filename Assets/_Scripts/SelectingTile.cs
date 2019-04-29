@@ -10,7 +10,7 @@ public class SelectingTile : MonoBehaviour
     public Tile newTileToSwap;
 
     private void Start() {
-        StoreObject.active = false;
+        StoreObject.SetActive(false);
     }
     // Update is called once per frame
     void Update()
@@ -20,21 +20,31 @@ public class SelectingTile : MonoBehaviour
         
         }
 
+        if (Utilities.CurrentMode == Utilities.GameModes.ROLLING) {
+            cameraAnimator.Play("cameraIdle");
+
+        }
         
+
 
         //TODO if we need this its not running every frame
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
+            cameraAnimator.SetTrigger("Zoom");
             SelectTileToReplace();
 
+        }
+        else {
+            cameraAnimator.StopPlayback();
+            //cameraAnimator.Play("cameraIdle");
         }
     }
 
     public void SelectTileToReplace() {
-        cameraAnimator.SetTrigger("Zoom");
+        
         RaycastHit hit;
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if (Physics.Raycast(ray, out hit, Mathf.Infinity)) {
-            Debug.Log(hit.transform.name);
+            //Debug.Log(hit.transform.name);
             Tile hitTile = hit.transform.gameObject.GetComponent<Tile>();
             
             if (Input.GetMouseButtonDown(0) && hitTile != null) {
@@ -52,14 +62,14 @@ public class SelectingTile : MonoBehaviour
         hitTile.Type = newTileToSwap.Type;
         hitTile.setTileColors();
 
-        StoreObject.active = false;
+        StoreObject.SetActive(false);
         cameraAnimator.SetTrigger("Reset");
         Utilities.NextAction();
 
     }
 
     private void ShowStore() {
-        StoreObject.active = true;
+        StoreObject.SetActive(true);
     }
 
     public Tile ParseTileData(string spriteName) {

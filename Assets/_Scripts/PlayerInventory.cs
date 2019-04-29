@@ -33,11 +33,11 @@ public class PlayerInventory : MonoBehaviour
     }
 
     private void InitResources() {
-        //! This is where the game starst
-        Time = 78;
+        //! This is where the game start
+        Time = 78; // average life
         Money = 10;
-        Social = 7;
-        Health = 50;
+        Social = 5;
+        Health = 25;
 
     }
 

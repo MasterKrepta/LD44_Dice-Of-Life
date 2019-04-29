@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 
 public class EventCard : MonoBehaviour
 {
@@ -48,22 +49,52 @@ public class EventCard : MonoBehaviour
     }
 
     private void InitCard() {
-        int index = Random.Range(0, CardManager.Instance.CardDeck.Count);
+        int index = UnityEngine.Random.Range(0, CardManager.Instance.CardDeck.Count);
         data = CardManager.Instance.CardDeck[index];
         CardManager.Instance.CardDeck.RemoveAt(index);
     }
 
     public void UseCard() {
-        
-        PlayerInventory.Instance.CollectResource(data.ActionType1, data.Action1Amount);
-        PlayerInventory.Instance.CollectResource(data.ActionType2, data.Action2Amount);
+        if (CanWeUseCard()) {
+            PlayerInventory.Instance.CollectResource(data.ActionType1, data.Action1Amount);
+            PlayerInventory.Instance.CollectResource(data.ActionType2, data.Action2Amount);
 
-        foreach (EventCard card in GameObject.FindObjectsOfType<EventCard>()) {
-            Destroy(card.gameObject);
+            foreach (EventCard card in GameObject.FindObjectsOfType<EventCard>()) {
+                Destroy(card.gameObject);
+            }
+            Utilities.NextAction();
         }
-        Utilities.NextAction();
 
-        
-        //? Do we need this to discard? - CardManager.Instance.Discard(this);
+
+    }
+
+    private bool CanWeUseCard() {
+        //IT has to be > then since the amount2 is always a negative number
+        switch (data.ActionType2) {
+            case Tile.TileTypes.SOCIAL:
+                if ((PlayerInventory.Social + data.Action2Amount) < 0) {
+                    return false;
+                }
+                break;
+            case Tile.TileTypes.HEALTH:
+                if ((PlayerInventory.Health + data.Action2Amount) < 0) {
+                    return false;
+                }
+                break;
+            case Tile.TileTypes.MONEY:
+                if ((PlayerInventory.Money + data.Action2Amount) < 0) {
+                    return false;
+                }
+                break;
+            case Tile.TileTypes.TIME:
+                if ((PlayerInventory.Time + data.Action2Amount) < 0) {
+                    return false;
+                }
+                break;
+            default:
+                return true;
+                break;
+        }
+        return true;
     }
 }
