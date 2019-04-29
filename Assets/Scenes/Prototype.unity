@@ -215,6 +215,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 240586849}
   m_CullTransparentMesh: 0
+--- !u!1 &242804710 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779102003353472987, guid: 321651c647789894dbb212c032e41211,
+    type: 3}
+  m_PrefabInstance: {fileID: 7779102002133628417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &242804716
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 242804710}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &259546107
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,10 +317,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 259546109}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -355,7 +377,7 @@ GameObject:
   - component: {fileID: 453070177}
   - component: {fileID: 453070176}
   - component: {fileID: 453070175}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tray wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -606,7 +628,7 @@ GameObject:
   - component: {fileID: 453825543}
   - component: {fileID: 453825542}
   - component: {fileID: 453825541}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tray wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -765,10 +787,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 522239926}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1159,6 +1181,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 783863965}
   m_CullTransparentMesh: 0
+--- !u!1 &802720023 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779102002079605821, guid: 321651c647789894dbb212c032e41211,
+    type: 3}
+  m_PrefabInstance: {fileID: 7779102002133628417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &802720029
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 802720023}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &912896006
 GameObject:
   m_ObjectHideFlags: 0
@@ -1239,10 +1283,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 912896008}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1287,6 +1331,28 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 912896006}
   m_CullTransparentMesh: 0
+--- !u!1 &1015680461 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779102001984326632, guid: 321651c647789894dbb212c032e41211,
+    type: 3}
+  m_PrefabInstance: {fileID: 7779102002133628417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1015680467
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1015680461}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1084784448
 GameObject:
   m_ObjectHideFlags: 0
@@ -1299,7 +1365,7 @@ GameObject:
   - component: {fileID: 1084784452}
   - component: {fileID: 1084784451}
   - component: {fileID: 1084784450}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tray wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1455,6 +1521,50 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1185223767 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779102002300884914, guid: 321651c647789894dbb212c032e41211,
+    type: 3}
+  m_PrefabInstance: {fileID: 7779102002133628417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1185223773
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1185223767}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!1 &1194699442 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779102001882071353, guid: 321651c647789894dbb212c032e41211,
+    type: 3}
+  m_PrefabInstance: {fileID: 7779102002133628417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1194699448
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194699442}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &1197633015
 GameObject:
   m_ObjectHideFlags: 0
@@ -1695,10 +1805,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1208454717}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -1823,10 +1933,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1220438780}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2124,7 +2234,7 @@ GameObject:
   - component: {fileID: 1276978976}
   - component: {fileID: 1276978975}
   - component: {fileID: 1276978974}
-  m_Layer: 0
+  m_Layer: 2
   m_Name: tray wall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2398,10 +2508,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1321678062}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2755,10 +2865,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1515336924}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -2883,10 +2993,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1627911253}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3011,10 +3121,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1693283429}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3139,10 +3249,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1881389092}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3267,10 +3377,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 1937921755}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3368,6 +3478,28 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1999334355 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7779102002998190694, guid: 321651c647789894dbb212c032e41211,
+    type: 3}
+  m_PrefabInstance: {fileID: 7779102002133628417}
+  m_PrefabAsset: {fileID: 0}
+--- !u!54 &1999334361
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999334355}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &2006054968
 GameObject:
   m_ObjectHideFlags: 0
@@ -3448,10 +3580,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2006054970}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3736,10 +3868,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2013661036}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3864,10 +3996,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2050752432}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -3992,10 +4124,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2094362080}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4120,10 +4252,10 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1244211844}
         m_MethodName: BuyNewTile
-        m_Mode: 1
+        m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_ObjectArgument: {fileID: 2130071338}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -4180,6 +4312,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlayerDice
       objectReference: {fileID: 0}
+    - target: {fileID: 7779102002304382796, guid: 321651c647789894dbb212c032e41211,
+        type: 3}
+      propertyPath: m_Layer
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 7779102002304382799, guid: 321651c647789894dbb212c032e41211,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4235,126 +4372,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7779102001882071355, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002079605823, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102003353472989, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002300884916, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002998190696, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001984326634, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: groundLayer.m_Bits
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001882071354, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001882071354, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001882071354, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001984326637, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001984326637, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001984326637, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002079605822, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002079605822, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002079605822, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002300884919, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002300884919, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002300884919, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002998190699, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002998190699, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002998190699, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102003353472988, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102003353472988, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 0.75
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102003353472988, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 0.75
-      objectReference: {fileID: 0}
     - target: {fileID: 200112992, guid: 321651c647789894dbb212c032e41211, type: 3}
       propertyPath: StoreObject
       value: 
@@ -4363,92 +4380,5 @@ PrefabInstance:
       propertyPath: cameraAnimator
       value: 
       objectReference: {fileID: 561257619}
-    - target: {fileID: 7779102002079605821, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002300884914, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002998190694, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102003353472987, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001257580724, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001264683519, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102001388447610, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002191113717, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002801884537, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002801884537, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002801884537, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002801884537, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Size.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002879397878, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7779102002801884535, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6516504358072901269, guid: 321651c647789894dbb212c032e41211,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7779102001496544753, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001496544750, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102002879397883, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102002191113718, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001388447615, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001264678400, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001257580729, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102002879397882, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102002191113721, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001388447614, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001264678403, guid: 321651c647789894dbb212c032e41211, type: 3}
-    - {fileID: 7779102001257580728, guid: 321651c647789894dbb212c032e41211, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 321651c647789894dbb212c032e41211, type: 3}

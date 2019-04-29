@@ -46,7 +46,7 @@ public class Utilities : MonoBehaviour
             case GameModes.SELECTING:
                 
                 CurrentMode = GameModes.ROLLING;
-                FindObjectOfType<RollDice>().Reset();
+                
                 break;
             default:
                 break;

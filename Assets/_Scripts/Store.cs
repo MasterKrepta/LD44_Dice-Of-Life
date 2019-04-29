@@ -26,14 +26,11 @@ public class Store : MonoBehaviour
         }
     }
 
-    public void BuyNewTile() {
+    public void BuyNewTile(Button b) {
     
-        //TODO select tile to replace
-        //remove tile from store. 
-        
         Destroy(Images[Images.Count - 1]);
         Images.RemoveAt(Images.Count - 1);
-        SelectingTile.ParseTileData(Images[Images.Count - 1].sprite.name.ToString());
+        SelectingTile.ParseTileData(b.image.sprite.name.ToString());
         SelectingTile.SelectTileToReplace();
         Utilities.NextAction();
         this.gameObject.SetActive(false);

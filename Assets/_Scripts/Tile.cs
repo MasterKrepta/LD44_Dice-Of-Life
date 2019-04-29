@@ -35,25 +35,11 @@ public class Tile : MonoBehaviour
     public TileTypes Type;
     public TileColor tileColor;
 
-    
-
-
     private void Start() {
         mr = GetComponent<MeshRenderer>();
         setTileColors();
     }
 
-
-    private void Update() {
-        //Debug.Log(LayerMask.NameToLayer("Default") + "is nothing");
-        //Debug.Log(LayerMask.NameToLayer("Ground") + "is Ground");
-        //if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
-        //    groundLayer = 0;
-        //}
-        //else {
-        //    groundLayer = 9;
-        //}
-    }
     public void setTileColors() {
         if (mr == null) {
             mr = GetComponent<MeshRenderer>();
@@ -79,12 +65,8 @@ public class Tile : MonoBehaviour
                 default:
                     break;
             }
-        
-
 
     }
-
-
 
      void OnMouseEnter() {
         
@@ -97,6 +79,7 @@ public class Tile : MonoBehaviour
         
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
             mr.material = highlight;
+            
             //transform.up = origPos;
         }
     }
@@ -104,7 +87,7 @@ public class Tile : MonoBehaviour
     public Tile(TileTypes type, int tileValue) {
         Debug.Log("CONSTRUCTOR CALLED");
         Type = type;
-        TileValue = TileValue;
+        TileValue = tileValue;
         //setTileColors();
        // mr = GetComponent<MeshRenderer>();
     }
