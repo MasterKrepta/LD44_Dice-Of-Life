@@ -5,10 +5,17 @@ using UnityEngine;
 
 public class Tile : MonoBehaviour
 {
-    [SerializeField] float hoverAmount = .2f;
-    [SerializeField] Material[] Materials;
     MeshRenderer mr;
-    [SerializeField] LayerMask groundLayer;
+    [SerializeField]
+    public int TileValue = 1;
+
+    [SerializeField] Material highlight;
+    [SerializeField] Material[] HealthMats;
+    [SerializeField] Material[] MoneyMats;
+    [SerializeField] Material[] SocialMats;
+    [SerializeField] Material[] TimeMats;
+    
+    public LayerMask groundLayer;
     public enum TileTypes
     {
         SOCIAL,
@@ -28,51 +35,81 @@ public class Tile : MonoBehaviour
     public TileTypes Type;
     public TileColor tileColor;
 
-    [SerializeField]
-    public int TileValue = 1;
+    
 
 
     private void Start() {
-        setTileColors();
         mr = GetComponent<MeshRenderer>();
+        setTileColors();
     }
 
-    private void setTileColors() {
-        switch (Type) {
-            case TileTypes.SOCIAL:
-                tileColor = TileColor.BLUE;
-                break;
-            case TileTypes.HEALTH:
-                tileColor = TileColor.RED;
-                break;
-            case TileTypes.MONEY:
-                tileColor = TileColor.GREEN;
-                break;
-            case TileTypes.TIME:
-                tileColor = TileColor.GOLD;
-                break;
-            default:
-                break;
+
+    private void Update() {
+        //Debug.Log(LayerMask.NameToLayer("Default") + "is nothing");
+        //Debug.Log(LayerMask.NameToLayer("Ground") + "is Ground");
+        //if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
+        //    groundLayer = 0;
+        //}
+        //else {
+        //    groundLayer = 9;
+        //}
+    }
+    public void setTileColors() {
+        if (mr == null) {
+            mr = GetComponent<MeshRenderer>();
         }
+            switch (Type) {
+                case TileTypes.SOCIAL:
+                    //tileColor = TileColor.BLUE;
+                    mr.material = SocialMats[TileValue - 1];
+                    break;
+                case TileTypes.HEALTH:
+                    //tileColor = TileColor.RED;
+                    mr.material = HealthMats[TileValue -1];
+                    break;
+                case TileTypes.MONEY:
+                    //tileColor = TileColor.GREEN;
+                    mr.material = MoneyMats[TileValue - 1];
+                    break;
+                case TileTypes.TIME:
+                    //tileColor = TileColor.GOLD;
+                    mr.material = TimeMats[TileValue - 1];
+
+                    break;
+                default:
+                    break;
+            }
+        
+
 
     }
 
 
-    
-    private void OnMouseEnter() {
-        if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
-            mr.material = Materials[1];
-            Debug.Log(this.name);
-         }
 
+     void OnMouseEnter() {
+        
+        if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
+            mr.material = highlight;
+
+        }
     }
-
-    private void OnMouseExit() {
+     void OnMouseExit() {
+        
         if (Utilities.CurrentMode == Utilities.GameModes.SELECTING) {
-            mr.material = Materials[0];
+            mr.material = highlight;
             //transform.up = origPos;
         }
     }
+
+    public Tile(TileTypes type, int tileValue) {
+        Debug.Log("CONSTRUCTOR CALLED");
+        Type = type;
+        TileValue = TileValue;
+        //setTileColors();
+       // mr = GetComponent<MeshRenderer>();
+    }
+    
+
 
     public bool IsGrounded() {
         if (Physics.Raycast(transform.position, -transform.up, Mathf.Infinity, groundLayer)) {

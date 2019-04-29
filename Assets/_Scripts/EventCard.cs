@@ -61,6 +61,7 @@ public class EventCard : MonoBehaviour
         foreach (EventCard card in GameObject.FindObjectsOfType<EventCard>()) {
             Destroy(card.gameObject);
         }
+        Utilities.NextAction();
 
         
         //? Do we need this to discard? - CardManager.Instance.Discard(this);

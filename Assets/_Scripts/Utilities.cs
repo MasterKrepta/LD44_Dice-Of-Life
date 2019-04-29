@@ -16,23 +16,35 @@ public class Utilities : MonoBehaviour
         ROLLING,
         COLLECTING,
         DRAW_EVENT,
+        BUYING,
         SELECTING,
+
     }
     
     public static void NextAction() {
         switch (CurrentMode) {
             case GameModes.ROLLING:
+                
                 CurrentMode = GameModes.COLLECTING;
                 //PlayerInventory.Instance.UpdateStats();
                 break;
             case GameModes.COLLECTING:
+                
                 CurrentMode = GameModes.DRAW_EVENT;
                 CardManager.Instance.DrawCard();
                 break;
             case GameModes.DRAW_EVENT:
+                CurrentMode = GameModes.BUYING;
+                
+
+                break;
+            case GameModes.BUYING:
                 CurrentMode = GameModes.SELECTING;
+                
+
                 break;
             case GameModes.SELECTING:
+                
                 CurrentMode = GameModes.ROLLING;
                 FindObjectOfType<RollDice>().Reset();
                 break;

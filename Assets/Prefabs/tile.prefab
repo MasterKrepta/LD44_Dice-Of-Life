@@ -108,6 +108,11 @@ MonoBehaviour:
   Materials:
   - {fileID: 2100000, guid: ed60f0f0445c5cd4c94f1d254e010731, type: 2}
   - {fileID: 2100000, guid: c51a7767020bc1f4d93d369243dcdf5c, type: 2}
+  - {fileID: 2100000, guid: e08a3ed150f73ae4da6ed50e62504ea2, type: 2}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 0
   onGround: 0
   Type: 2
+  tileColor: 0
   TileValue: 1

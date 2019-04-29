@@ -42,7 +42,6 @@ public class RollDice : MonoBehaviour
                 hasLanded = true;
                 rb.useGravity = false;
 
-                //TODO value check the sides to get value
                 CheckSides();
 
             }
@@ -80,12 +79,15 @@ public class RollDice : MonoBehaviour
 
     void CheckSides() {
         DiceValue = 0;
+        
         foreach (Tile tile in diceTiles) {
             if (tile.IsGrounded()) {
                 DiceValue = tile.TileValue;
-                Debug.Log($"Rolled a {DiceValue} to {tile.Type}");
+                //Debug.Log($"Rolled a {DiceValue} to {tile.Type}");
                 Utilities.NextAction();
                 PlayerInventory.Instance.CollectResource(tile.Type, DiceValue);
+                Reset();
+                Utilities.NextAction();
             }
         }
     }

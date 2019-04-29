@@ -34,10 +34,10 @@ public class PlayerInventory : MonoBehaviour
 
     private void InitResources() {
         //! This is where the game starst
-        Time = 0;
-        Money = 0;
-        Social = 0;
-        Health = 2;
+        Time = 78;
+        Money = 10;
+        Social = 7;
+        Health = 50;
 
     }
 
@@ -60,7 +60,6 @@ public class PlayerInventory : MonoBehaviour
         }
 
         UpdateStats();
-        Utilities.NextAction();
     }
 
     public   void UpdateStats() {
