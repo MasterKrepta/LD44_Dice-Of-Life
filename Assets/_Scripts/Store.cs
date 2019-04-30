@@ -1,21 +1,19 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Store : MonoBehaviour
 {
+    [SerializeField] GameObject skipButton;
     [SerializeField]List<Image> Images;
     [SerializeField] List<Sprite> Sprites;
-
-
     SelectingTile SelectingTile;
-
 
     private void Awake() {
         SelectingTile = FindObjectOfType<SelectingTile>();
         PopulateStore();
+        skipButton.SetActive(true);
     }
 
     public void PopulateStore() {
@@ -28,7 +26,9 @@ public class Store : MonoBehaviour
     }
 
     public void BuyNewTile(Button b) {
+
         if (CanWeBuy(b)) {
+            skipButton.SetActive(false);
             Destroy(Images[Images.Count - 1]);
             Images.RemoveAt(Images.Count - 1);
             SelectingTile.ParseTileData(b.image.sprite.name.ToString());
@@ -37,7 +37,13 @@ public class Store : MonoBehaviour
             Utilities.NextAction();
             this.gameObject.SetActive(false);
         }
+    }
 
+    public void SkipStore() {
+        skipButton.SetActive(false);
+        Utilities.CurrentMode = Utilities.GameModes.SELECTING;
+        Utilities.NextAction();
+        this.gameObject.SetActive(false);
     }
 
     private bool CanWeBuy(Button button) {
@@ -76,11 +82,6 @@ public class Store : MonoBehaviour
                 return false;
                 break;
         }
-
         return false;
-
-        
     }
-
-    
 }

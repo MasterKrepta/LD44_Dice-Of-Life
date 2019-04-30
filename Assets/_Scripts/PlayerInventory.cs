@@ -7,13 +7,10 @@ using System;
 
 public class PlayerInventory : MonoBehaviour
 {
-
     public static float Time; // Decreases each turn/ can be increased by buying luxurays... like house maid
     public static float Money; // needed to pay for just about everything: Basic resource
     public static float Social; // friends  cost money but increase happiness
     public static float Health; // needs to be maintained to maximize time left alive. cards can make you sick
-
-
 
     public static PlayerInventory Instance = null;
 
@@ -21,10 +18,8 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField]  TMP_Text txtMoney;
     [SerializeField]  TMP_Text txtSocial;
     [SerializeField]  TMP_Text txtHealth;
-
     [SerializeField] TMP_Text currentMode;
     
-
     private void Start() {
         if (Instance == null) {
             Instance = this;
@@ -34,7 +29,6 @@ public class PlayerInventory : MonoBehaviour
     }
 
     private void InitResources() {
-        //! This is where the game start
         Time = 20; // average life
         Money = 10;
         Social = 5;

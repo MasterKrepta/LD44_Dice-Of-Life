@@ -65,8 +65,6 @@ public class EventCard : MonoBehaviour
             }
             Utilities.NextAction();
         }
-
-
     }
 
     private bool CanWeUseCard() {

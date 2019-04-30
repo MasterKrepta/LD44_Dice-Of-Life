@@ -37,6 +37,7 @@ public class Utilities : MonoBehaviour
                 CardManager.Instance.DrawCard();
                 break;
             case GameModes.DRAW_EVENT:
+                CardManager.Instance.skipButton.SetActive(false);
                 CurrentMode = GameModes.BUYING;
                 
 

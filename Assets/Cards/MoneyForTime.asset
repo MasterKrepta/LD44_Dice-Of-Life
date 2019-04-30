@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21d0622c882e3d2478a4d34b21fee9bb, type: 3}
   m_Name: MoneyForTime
   m_EditorClassIdentifier: 
-  Title: I Clean Mpw?
+  Title: I Clean Now?
   Description: Treat yourself. Hire a maid for the housework this month
   Action1Amount: 3
   ActionType1: 3

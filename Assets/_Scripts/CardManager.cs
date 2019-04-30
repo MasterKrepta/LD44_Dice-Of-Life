@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class CardManager : MonoBehaviour
 {
+    public GameObject skipButton;
     public List<CardData> CardDeck;
     Image image;
     [SerializeField] GameObject cardCanvas;
@@ -23,9 +24,11 @@ public class CardManager : MonoBehaviour
         if (Instance == null) {
             Instance = this;
         }
+        skipButton.SetActive(false);
     }
 
     public void DrawCard() {
+        skipButton.SetActive(true);
         if (CardDeck.Count < cardsToDraw) {
             cardsToDraw = CardDeck.Count;
             
@@ -42,4 +45,11 @@ public class CardManager : MonoBehaviour
         }
     }
 
+    public void SkipCards() {
+        skipButton.SetActive(false);
+        foreach (EventCard go in cardCanvas.GetComponentsInChildren<EventCard>()) {
+            Destroy(go.gameObject);
+        }
+        Utilities.NextAction();
+    }
 }
