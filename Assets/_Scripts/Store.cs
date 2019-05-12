@@ -15,6 +15,9 @@ public class Store : MonoBehaviour
         PopulateStore();
         skipButton.SetActive(true);
     }
+    private void OnEnable() {
+        skipButton.SetActive(true);
+    }
 
     public void PopulateStore() {
   
